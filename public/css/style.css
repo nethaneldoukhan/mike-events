@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+
+* {
+    font-family: 'Merienda', cursive;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    padding: 0 10px;
+}
+
+html, body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: black linear-gradient(to bottom, black 0%, white 90%);
+}
+
+.logo_tel {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+}
+
+.logo_tel i {
+    padding: 0 0.75rem;
+}
+
+.logo_tel div:last-child {
+    font-family: 'Redressed', cursive;
+}
+
+nav ul {
+    margin: auto;
+    padding: 2rem 0;
+    max-width: max-content;
+}
+
+nav ul li {
+    /* flex-direction: row; */
+    /* list-style: none; */
+    display: inline-block;
+}
+
+nav li a {
+    padding: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+.section-title {
+    background-color: white;
+}
+
+h1 {
+    margin: auto;
+    max-width: max-content;
+}
+
+.bg {
+    /* position: relative; */
+    /* margin: 5rem 0; */
+    width: 100%;
+    min-height: 35rem;
+    /* width: 100%; */
+    text-align: center;
+    background: fixed center no-repeat;
+    background-size: cover;
+}
+
+.card .container-card {
+    width: 100%;
+}
+
+.card-body {
+    background-color: rgba(0, 0, 0, 0.836);
+}
+
+.card h2 {
+    margin: auto;
+    max-width: max-content;
+    padding: 0.4rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.card p {
+    margin: auto;
+    max-width: max-content;
+    padding: 0.4rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.card:first-child .bg {
+    background-image: url('../assets/images/site/demande_mariage2.jpg');
+}
+
+.card:nth-child(2) .bg {
+    background-image: url('../assets/images/site/mariage.jpg');
+}
+
+.card:nth-child(3) .bg{
+    background-image: url('../assets/images/site/bar_mitzva.jpg');
+}
+
+.card:last-child .bg{
+    background-image: url('../assets/images/site/audience.jpg');
+}
+
+footer {
+    background: white linear-gradient(to bottom, white 0%, black 90%);
+    padding: 3rem;
+}
+
+.form-footer {
+    margin: auto;
+    max-width: max-content;
+    text-align: center;
+}
+
+figure {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.galerie div {
+    width: 15rem;
+}
+
+.galerie img {
+    max-width: 100%;
+}
+
+.contact-body {
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-infos {
+    background-color: rgba(255, 255, 255, 0.438);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.contact-body div div {
+    margin: 2rem 0;
+}
+
+.form-contact {
+    width: 20rem;
+}
+
+.form-contact input,
+.form-contact textarea {
+    width: 90%;
+}
+
+.required {
+    color: red;
+}
+
+.bg-body-contact {
+    background-image: url('../assets/images/site/feu_d_artifice2.jpg');
+    /* background: center no-repeat; */
+    background-size: 100% 100%;
+}
+
+
+@media (min-width: 768px) {
+
+    .contact-body {
+        flex-direction: row;
+    }
+
+}
+
+@media (min-width: 1140px) {
+
+    .container {
+        width: 1140px;
+        margin: auto;
+    }
+
+}
