@@ -1,0 +1,117 @@
+<%- include('../partials/header') %>
+
+
+<section>
+    <div class="container">
+        <div>
+            <h1>
+                DASHBOARD
+            </h1>
+
+            <div>
+
+                <div class="wid100 bc_gr ta-c">header</div>
+                <div class="panneau_box">
+                    <div class="panneau_nav bc_gr">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#acceuil">Photos page acceuil</a>
+                                </li>
+                                <li>
+                                    <a href="#galerie">Photos galerie</a>
+                                </li>
+                                <li>
+                                    <a href="#infos">infos</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="panneau_body">
+                        <div id="home_page">
+                            <H2 class="ta-c">Page d'accueil</H2>
+                            <div>
+                                <h3>
+                                    Photos
+                                </h3>
+                                <div>
+                                    <% if (indexCards[0]) {
+                                        indexCards.map((item) => { %>
+                                            <div class="container_item">
+                                                <h4 class="row align-items-center wid100">
+                                                    <i class="fas fa-chevron-down col"></i>
+                                                    <!-- <i class="fas fa-chevron-up arrow"></i> -->
+                                                    <span class="col"><%= item.name %></span>
+                                                </h4>
+                                                <div class="row container_body">
+                                                    <div class="col-lg-3 col-md-3 container_img">
+                                                        <img class="wid100" src="/assets/images/site/<%= item.photo %>" alt="">
+                                                    </div>
+                                                    <div class="col-lg-5 col-md-6 name_description">
+                                                        <div>
+                                                            <span class="bold">Nom photo:</span> <br>
+                                                            <%= item.name %>
+                                                        </div>
+                                                        <p>
+                                                            <span class="bold">Description:</span> <br>
+                                                            <%= item.description %>
+                                                            kohjfdghfdghgd fghldfghljdfgjl gfjkh dfghlkjdhfglkjhgf lkljhfdg kjhdfg lkjhdf gkhj
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-12 container_action">
+                                                        <button class="btn btn-gray edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                            Editer
+                                                        </button>
+                                                        <button class="btn btn-gray col-red">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                            Suprimer
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                       <% })
+                                    } %>
+                                </div>
+                                <div class="container_btn_add_theme ta-c">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-gray" data-bs-toggle="modal" data-bs-target="#modal">
+                                        Ajouter un thème
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="modalLabel">Ajouter un thème</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-gray">Save changes</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="wid100 bc_gr ta-c">footer consulté 20 fois</div>
+
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<%- include('../partials/footer') %>

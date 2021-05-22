@@ -5,19 +5,27 @@
     <div class="container">
         <h1>Un apperçu de nos prestations</h1>
 
-        
         <div>
-            <h2>
-                Mariage
-            </h2>
-            <figure class="galerie">
-                <div><img src="/assets/images/site/computer_and_flowers2.jpg" alt=""></div>
-                <div><img src="/assets/images/site/demande_mariage.jpg" alt=""></div>
-                <div><img src="/assets/images/site/handOnComputer2.jpg" alt=""></div>
-                <div><img src="/assets/images/site/mariage.jpg" alt=""></div>
-                <div><img src="/assets/images/site/working-on-code2.jpg" alt=""></div>
-            </figure>
+        <% if (completeGalleryImage && completeGalleryImage[0]) {
+            completeGalleryImage.map((item) => { %>
+                <div>
+                    <h2>
+                        <%= item.gallery.name %>
+                    </h2>
+
+                    <% if (item.galleryImages[0]) { %>
+                        <figure class="galerie">
+                            <% item.galleryImages.map((item) => { %>
+                                <div><img src="/assets/images/site/<%= item.image %>" alt="<%= item.description %>"></div>                            
+                            <% }) %>
+                        </figure>
+                    <% } %>
+                </div>
+            <% })
+        } %>
+        
         </div>
+        
     </div>
 </section>
 
