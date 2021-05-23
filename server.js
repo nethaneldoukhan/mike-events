@@ -140,10 +140,10 @@ app.get('*', (req, res) => {
 
 const start = async () => {
     await mongoose.connect(
-        'mongodb://127.0.0.1/mike-events', //local
-        // 'mongodb+srv://nati:nati1980.@nsd.louvo.mongodb.net/nsd?retryWrites=true&w=majority&useNewUrlParser=true&useUnifiedTopology=true',
-    //     // connectionUrl,
-        {useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true}
+        // 'mongodb://127.0.0.1/mike-events', //local
+        'mongodb+srv://mike-events:00000000@mike-events.s7mmd.mongodb.net/mike-events?retryWrites=true&w=majority&useNewUrlParser=true&useUnifiedTopology=true',
+        // connectionUrl,
+        // {useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true}
     )
     debug('Connected to db server')
 
