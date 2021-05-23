@@ -20,6 +20,11 @@ header {
     background: black linear-gradient(to bottom, black 0%, white 90%);
 }
 
+a {
+    text-decoration: none;
+    color: unset;
+}
+
 .logo_tel {
     padding-top: 2rem;
     display: flex;
